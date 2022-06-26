@@ -427,15 +427,19 @@
             </li>
           </ul>
         </div>
-        <form class="subscription-fom">
-          <label for="mail">Подпишитесь на рассылку</label>
-          <input type="email" name="mail" id="mail" placeholder="E-mail" />
-
-          <button type="submit">Подписаться <span>svg</span></button>
+        <form class="subscription-form">
+          <div class="subscription-mail-form">
+            <label for="mail">Подпишитесь на рассылку</label>
+            <input class="subscription-input" type="email" name="mail" id="mail" placeholder="E-mail" />
+          </div>
+          <button class="subscription-button" type="submit">Подписаться <span>
+            <svg class="subscription-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-telegram"></use>
+          </svg>
+        </span></button>
         </form>
       </div>
     </footer>
-
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" data-modal-close>
@@ -443,26 +447,28 @@
             <use href="./images/icons.svg#icon-vector"></use>
           </svg>
         </button>
-        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="collback-form" autocomplete="off">
           <div class="form-field">
-            <label for="name">Имя</label>
+            <label for="name" class="form-label">Имя</label>
             <input
               type="text"
-              class="modal-input"
+              class="form-input"
               name="name"
               id="name"
               placeholder=""
               required
               autofocus
-            />
+            /> 
+            <svg class="name-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-form-name"></use>
+            </svg>
           </div>
-
           <div class="form-field">
-            <label for="tel">Телефон</label>
+            <label for="tel" class="form-label">Телефон</label>
             <input
               type="tel"
-              class="modal-input"
+              class="form-input"
               name="tel"
               id="tel"
               title="=380 (93) 111 11 11"
@@ -472,13 +478,13 @@
             />
           </div>
           <div class="form-field">
-            <label for="mail">Почта</label>
-            <input type="email" class="modal-input" name="mail" id="mail" placeholder="" required />
+            <label for="mail" class="form-label">Почта</label>
+            <input type="email" class="form-input" name="mail" id="mail" placeholder="" required />
           </div>
           <div class="form-field">
-            <label for="comment">Комментарий</label>
+            <label for="comment"class="form-label">Комментарий</label>
             <textarea
-              class="modal-input modal-textarea"
+              class="form-input form-textarea"
               id="comment"
               rows="5"
               placeholder="Введите текст"
@@ -497,7 +503,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script>
+    <!-- <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('.submit', e => {
           e.preventDefault();
@@ -507,6 +513,6 @@
           e.currentTarget.reset();
         });
       })();
-    </script>
+    </script> -->
   </body>
 </html>
