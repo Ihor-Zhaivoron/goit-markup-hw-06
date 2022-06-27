@@ -809,6 +809,7 @@ height: 50px;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 
   margin-left: 40px;
   margin-right: 40px;
@@ -823,14 +824,37 @@ height: 50px;
 .checkbox-label .checkbox-input {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
+  width: 10px;
+  height: 10px;
   margin: -1px;
   border: 0;
   padding: 0;
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.frame-icon{
+  margin-right: 7px;
+  opacity: 1;
+  transition: opacity 250ms var(--time-function);
+}
+.check-icon {
+  position: absolute;
+  left: 12px;
+  opacity: 0;
+  width: 16px;
+  height: 15px;
+
+  transition: opacity  250ms var(--time-function);
+}
+.checkbox-input:checked + .frame-icon {
+  opacity: 0;
+}
+.checkbox-input:checked + .check-icon {
+  opacity: 1;
+  color: #FFFFFF;
+  background-color:  var(--hover-focus-color);
 }
 .pact-link {  
   margin: 0;
