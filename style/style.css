@@ -819,6 +819,8 @@ margin-right: 10px;
   overflow: hidden;
 }
 .checkbox-icon {
+  display: flex;
+  align-items: center;
   margin-right: 7px;
   width: 16px;
   height: 15px;
@@ -834,16 +836,11 @@ margin-right: 10px;
 
   transition: background-color 250ms var(--time-function);
 }
-/* .checkbox-input:checked + .frame-icon {
-  opacity: 0;
-} */
-.checkbox-label:checked ~ .checkbox-icon,
-.checkbox-label:checked ~ .check-icon {
+.checkbox-input:checked ~ .checkbox-icon,
+.checkbox-input:checked ~ .check-icon {
   background-color:  var(--hover-focus-color);
   border: none;
-  background-size: contain;
-  background-origin: content-box;
-}
+  }
 .pact-link {  
   margin: 0;
   padding: 0;
