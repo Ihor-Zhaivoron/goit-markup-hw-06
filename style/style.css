@@ -586,33 +586,26 @@ margin-right: 10px;
   background-color: var(--hover-focus-color);
 }
 .subscription-form {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  
-  margin-left: 93px;
-  margin-top: 72px;
-
+  margin-left: auto;
 }
-.subscription-mail-form {
-  display: flex;
-  flex-direction: column;
-
-  
+.subscription-title {
+  margin-bottom: 20px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-color: #FFFFFF;
-
+  color: #FFFFFF;
+}
+.subscription-mail-form {
+  display: flex;
 }
 .subscription-input {
-  margin-top: 20px;
   margin-right: 12px;
-
+  padding: 15px 16px;
   width: 358px;
-height: 50px;
+  height: 50px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -625,9 +618,7 @@ height: 50px;
   border-radius: 4px;
 }
 .subscription-mail-form input::placeholder {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
+  padding-top: 15px 0;
 }
 .subscription-button {  
   display: flex;
@@ -647,6 +638,7 @@ height: 50px;
   background-color: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 .subscription-icon {
   margin-left: 10px;
@@ -674,12 +666,12 @@ height: 50px;
   opacity: 0;
 }
 .modal {
+  padding:  40px;
   position: absolute;
   top: 50%;
   left: 50%;
 
-  min-height: 581px;
-  min-width: 528px;
+  width: 528px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -694,6 +686,8 @@ height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 0;
   
   position:absolute;
   top: 8px;
@@ -706,11 +700,14 @@ height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;  
 }
+.modal-btn:hover {
+  background-color:  var(--hover-focus-color);
+}
 .close-icon {
   color: #000000;
 }
 .form-title {
-  margin: 40px 40px 12px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -720,7 +717,6 @@ height: 50px;
   color: #212121;
 }
 .form-list {
-  display: block;
   margin-bottom: 20px;
 }
 .form-field {
@@ -728,10 +724,7 @@ height: 50px;
   flex-direction: column;
   position: relative;
 
-  margin-right: 40px;
-  margin-left: 40px;
   margin-bottom: 10px;
-
 }
 .form-field label {
   margin-bottom: 4px;
@@ -748,7 +741,6 @@ height: 50px;
   width: 448px; ;
   height: 40px;
 
-  margin-bottom: 10px;
   padding-left: 42px;  
   
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -768,9 +760,6 @@ height: 50px;
 .form-input:focus ~ .form-icon {
   fill: var(--hover-focus-color);
 }
-/* .form-field:focus-within > .form-icon {
-  color: #2196F3;
-} */
 .form-icon {
   position: absolute;
   bottom: 0;
@@ -806,14 +795,10 @@ height: 50px;
 
 } */
 .checkbox-label {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  margin-left: 40px;
-  margin-right: 40px;
-
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -824,7 +809,7 @@ height: 50px;
 .checkbox-label .checkbox-input {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 
   position: absolute;
 
@@ -837,27 +822,26 @@ height: 50px;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.frame-icon{
+.checkbox-icon {
   margin-right: 7px;
-  opacity: 1;
-  transition: opacity 250ms var(--time-function);
+  width: 16px;
+  height: 15px;
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
 }
 .check-icon {
   position: absolute;
   left: 12px;
-  opacity: 0;
   width: 16px;
   height: 15px;
-  color: #FFFFFF;
-  transition: opacity  250ms var(--time-function);
+  fill: #FFFFFF;
+
+  transition: background-color 250ms var(--time-function);
 }
 .checkbox-input:checked + .frame-icon {
   opacity: 0;
 }
-.checkbox-input:checked + .check-icon {
-  opacity: 1;
-  color: #FFFFFF;
+.checkbox-label:checked ~ .check-icon {
   background-color:  var(--hover-focus-color);
 }
 .pact-link {  
@@ -876,7 +860,6 @@ height: 50px;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
 
   font-family: 'Roboto';
   font-weight: 700;
